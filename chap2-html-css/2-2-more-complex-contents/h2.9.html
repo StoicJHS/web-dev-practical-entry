@@ -1,0 +1,48 @@
+<!-- 테이블 -->
+<!--
+
+    * table 요소: 테이블 전체를 통합하는 것. <table> ~ </table> 안에 모든 것을 기술한다.
+    * thread 요소: 테이블의 헤더 부분을 기술하기 위한 것. 헤더: 테이블의 각 항목의 타이틀등을 표시하는 부분
+    * tbody 요소: 테이블의 몸통(표의 컨텐츠 부분)을 기술하기 위한 것. 표의 각 데이터는 <tbody> ~ </tbody> 안에 넣는다.
+    * tr 요소: <thread>와 <tbody> 내에서 기술된다. 컨텐츠의 "행"을 통합하기 위한 것. 각 행 별로 <tr> ~ </tr> 안에 넣는다.
+    * th 요소: 헤더의 항목을 기술하기 위한 것. <th> ~ </th>와 같은 형태로 헤더 항목을 기술한다.
+    * td 요소: 테이블의 항목을 기술하는 것. 항목 한개한개를 모두 <td> ~ </td>라는 형태로 기술해간다. 
+    
+ *** <thread>와 <tbody> 이 두 개의 태그는 생략이 가능하다. (없어도 아무런 문제가 일어나지 않는다.)
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello!</title>
+    </head>
+    <body>
+        <h1>Hello!</h1>
+        <p> 테이블의 표시</p>
+        <table>
+            <thread>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Mail</th>
+                </tr>
+            </thread>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Harry Potter</td>
+                    <td>harrypotter@Auror</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ron Weasley</td>
+                    <td>ronweasley@Auror</td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </body>
+</html>
