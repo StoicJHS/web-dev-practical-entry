@@ -1,0 +1,34 @@
+<!--
+    Html에는 표지를 디자인하기 위한 기능은 없다. 디자인을 위해서는 "스타일 시트 (=CSS)"라고 불리는 것이 필요하다.
+    Cascading Style Sheets. 이것은 HTML이나 XML등의 요소에 장식을 지시하기 위한 것. 
+    다시 말하여, 폰트나 색이나 위치나 크기등, 다양한 표시와 관련된 설정을 하는 것. 
+
+    크게 2가지 CSS 기술 방법이 있다:
+    1. HTML 소스코드에 전용 태그를 사용하여 직접 기술하기
+    2. 스타일 시트을 기술한 파일을 작성하여, 그것 전체를 읽게 하기
+
+    1번 방법을 통해서 보면:
+    <style> </style>
+
+-->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello!</title>
+    <style>
+        h1 { color: red;}
+        p { font-size: 24px; color:blue;}
+    </style>
+</head>
+<body>
+    <h1>Hello!</h1>
+    <p>This is a sample content.</p>
+</body>
+</html>
+
+<!--
+    element_name {... sytle ...}
+    property name: property value;
+-->
