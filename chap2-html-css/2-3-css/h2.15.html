@@ -1,0 +1,27 @@
+<!-- ID 부여하기 -->
+<!--
+    <요소 id = "<id>">
+    스타일 시트: # <id> { 스타일 }       <- ID 앞에 # 붙이는 것이 포인트
+    특정 html 요소에 부여된 id를 지정하고자 하는 경우: <요소> # id {...스타일...}
+    
+-->
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello!</title>
+        <style>
+            body { margin: 0px 20px;}
+            h1 { font-size: 2.0em; color:red;}
+            p {font-size: 1.2em; color: darkblue;}
+            p#next { font-size: 1.5em; color:#aa00ff;}
+        </style>
+    </head>
+    <body>
+        <h1>Hello!</h1>
+        <p>This is Sample Content.</p>
+        <p id="next"> This is <span>sample</span> content.</p>
+        <p> This is sample content</p>
+    </body>
+</html>
