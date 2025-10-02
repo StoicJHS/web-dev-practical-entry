@@ -1,0 +1,45 @@
+<!--
+    Font관계의 property
+    * font-family: 폰트명; e.g.) serif, sans-serif, monospace, cursive, fantasy 
+      (serif, sans-serif가 제일 일반적 사용됨. monospace는 <pre> 등에 사용, cursive, fantasy는 장식용 폰트, 본문에는 별로 어울리지 않는다.)
+
+    * font-size: 크기;
+      단위: px (픽셀), em (비율을 나타내는 거. 1.0em는 원촌법 크기?), %는 말그대로 %로 크기 지정
+      크기 키워드: xx-small, x-small, small, medium, large, x-large, xx-large
+    * font-weight: 굵기;
+      norma: 표준 상태, 400정도
+      bold: 볼드, 수치로는 700정도 
+      ligher: 현재 상태보다 1랭크 얇게
+      bolder: 현재 상태보다 1랭크 굵게
+      (수치는 100~900 사이에 대해서 1000단위로 지정)
+
+    * font-style: 스타일명;
+      normal: 표준
+      italic: 이탈릭체
+      oblique: 기울기가 있는 체 
+
+    ** 폰트를 한번에 설정
+       e.g.) font: 스타일관계 사이즈 폰트명 
+       e.g.) font: bold normal 1.0em serif
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello!</title>
+        <style>
+            h1 { font-size:2.5em; font-family:cursive; }
+            h2 { font-size:2.0em; font-family:fantasy; }
+            p { font-size: 1.2em; font-family: sans-serif; }
+            span {font: bold italic 1.7em Serif;}
+        </style>
+    </head>
+    <body>
+        <h1>Hello!</h1>
+        <h2>Hello!</h2>
+        <p>This is <span> Sample</span> content.</p>
+    </body>
+</html>

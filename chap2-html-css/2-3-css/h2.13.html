@@ -1,0 +1,29 @@
+<!--
+    색을 설정하는 property
+    글자색 -> color: 색값;
+    배경색 -> background-color: 색값;
+    색값:
+        * 16진수: e.g.) #FF9900 (빨강=FF, 초록=99, 파랑=00) (2자리 16진수: 00~FF)
+        * RGB: e.g.) rgb(255, 127, 0) or rgba(255, 127, 0, 0.5) (a: alpha 즉, 투명도) (0~255)
+        * 색이름: white,  balck, red, green, blue, ...
+
+-->
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello!</title>
+        <style>
+            h1 { font-size: 2.0em; color:#ff0000;}
+            h2 { font-size: 1.6em; color: rgb(0,255,255); }
+            p { font-size: 1.2em; color: blue}
+            span {color:white; background-color: magenta;}
+        </style>
+    </head>
+    <body>
+        <h1>Hello!</h1>
+        <h2>Hello!</h2>
+        <p> This is <span>Sample</span> content.</p>
+    </body>
+</html>
