@@ -1,0 +1,61 @@
+<!--
+    Bootstrap's unique UI not originally present in HTML.
+    These require detailed processing through JavaScript scripts to function.
+-->
+
+<!--
+    Collapse: Unique item that can be used to switch the display on or off by clicking.
+-->
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello!</title>
+
+    <!-- Bootstrap 4.3.1 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css"
+    />
+
+    <!-- jQuery (slim) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Bootstrap JS (도메인 오타 수정: stackpath) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body class="container py-4">
+    <h1 class="display-4 text-center">Hello!</h1>
+
+    <p class="text-center">
+      <a
+        class="btn btn-primary"
+        data-toggle="collapse"
+        href="#collapse"
+        role="button"
+        aria-expanded="false"
+        aria-controls="collapse"
+      >
+        show/hide collapse
+      </a>
+    </p>
+
+    <div class="collapse" id="collapse">
+      <div class="card card-body">
+        This is a content displayed as "collapse".
+      </div>
+    </div>
+  </body>
+</html>
+
+
+<!--
+    여기서 소개된 부품류는 "컴포넌트"라고 Bootstrap에 있는 막대한 기능중 일부다. 
+    지금까지를 통해서 웹페이지의 '표시'에 대해서는 일단락 지식이 몸에 익혀졌다.
+    텍스트의 조합을 통해서 간단한 웹페이지의 제작 정도는 가능하게 되었다.
+
+    다음 스텝으로서, 웹 페이지의 컨텐츠를 "프로그램으로 조작할 수 있도록"하는 것.
+    -> JavaScript의 등장!
+-->
