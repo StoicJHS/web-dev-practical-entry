@@ -1,0 +1,42 @@
+<!--
+    변수선언: var 변수;
+    변수대입: 변수 = 값;
+    선언에 대입: var 변수 = 값;
+
+    선언에 대입: let 변수; let 변수 = 값;
+    -> 차이? 스코프(scope), 즉 이용 범위가 다르다! 하지만 거의 동일! 구문이나 함수에서 차이 발생!
+    let: {}로 감싸진 부분인 블록, 즉 구문 안에있는 변수에서만 사용 가능
+    var: 그 변수가 쓰여있는 함수 내에서 기능.
+    var보다 let이 더 엄격하게 사용되는 범위가 제한되어 있다.
+
+    상수: const 상수 = 값; (변경 되지 않는 변수)
+    연산: +,-,*,/,% (기본적으로 C++이나 Fortran과 동일)
+    텍스트 연산: var a = "ABC" + "XYZ" 와 같이 하나의 텍스트로 연결!
+
+-->
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello!</title>
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+    </head>
+    <body class="container">
+        <h1>Hello!</h1>
+        <p> <script>
+            var price = 123500;
+            var tax0 = 0.08;
+            var tax1 = 0.1;
+            document.write("金額:" + price + "<br>");
+            document.write("軽減税率適用:" + price*(1.0 + tax0) + "円<br>" );
+            document.write("通常の税率:" + price*(1.0 + tax1) + "円<br>");
+        </script> </p>
+    </body>
+</html>
+
+<!--
+    스크립트가 길어지면, <script src="filename"></script>와 같은 식으로 불러올 수 있다!
+    document.write: 지정한 값을 그 장소에 표시하는 JS의 문법!
+-->
