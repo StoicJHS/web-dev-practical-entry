@@ -1,0 +1,64 @@
+<!--
+    HTML의 오소에는, 이벤트에 관련된 속성이 다양하게 준비되어 있다.
+    이벤트란, 다양한 사건에 대해 반응하여 발신되는 신호 (e.g., 키를 타입, 마우스를 클릭, 윈도우 사이즈 변경 등등...)
+
+    아래는, 마우스를 클릭했다는 이벤트를 사용한 예시:
+-->
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello!</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+    </head>
+    <body class="container">
+        <h1>Hello!</h1>
+        <p id="msg">フォームを入力:</p>
+        <div class="form-group">
+            <label for="f1">Name</label>
+            <input type="text" id="f1" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="f1">Password</label>
+            <input type="password" id="f2" class="form-control">
+        </div>
+        <div class="form-group">
+            <button onclick="action(event)" class="btn btn-primary">
+            Click! 
+        </button>
+        </div>
+        <script>
+            function action(event){
+                var f1 = document.querySelector('#f1'); 
+                var f2 = document.querySelector('#f2'); 
+                var result = 'Your name: ' + f1.value + '<br>'
+                + 'Password:(' + f2.value.length + 'chars)';
+                var msg = document.querySelector('#msg');
+                msg.innerHTML = result;
+            }
+        </script>
+    </body>
+</html>
+
+<!--
+    var f1 = document.querySelector('#f1'); 
+    var f2 = document.querySelector('#f2'); 
+
+    먼저 2개의 입력 필드의 DOM 오브젝트를 준비.
+
+    var result = 'Your name: ' + f1.value + '<br>'
+                + 'Password:(' + f2.value.length + 'chars)';
+
+    -> .value를 통해서 값을 얻어내고 있다. 
+
+
+    만약 textContent를 이용하게 되버리면, <br>도 텍스트로서 그대로 출력되어버리게 된다.
+    이때, innerHTML을 이용해서 HTML의 태그를 포함하는 텍스트를 깔끔하게 표현할 수 있다. 
+
+
+    또한, <form>의 태그도 여기선 필요없다.
+    <form> 태그는, 그 form을 서버에 송신하기 위해서 사용하는 것. 여기서는 서버에 송신하지 않고,
+    JavaScript를 이용하고 있기 때문에, <form>을 준비할 필요가 없다. 
+    정리하자면, "<form>은 폼을 송신하기 위해 필요하다. 송신하지 않을 거면 불필요! "
+-->

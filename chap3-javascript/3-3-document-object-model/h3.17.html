@@ -1,0 +1,28 @@
+<!--
+    HTML의 오소에는, 이벤트에 관련된 속성이 다양하게 준비되어 있다.
+    이벤트란, 다양한 사건에 대해 반응하여 발신되는 신호 (e.g., 키를 타입, 마우스를 클릭, 윈도우 사이즈 변경 등등...)
+
+    아래는, 마우스를 클릭했다는 이벤트를 사용한 예시:
+-->
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello!</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+    </head>
+    <body class="container">
+        <h1>Hello!</h1>
+        <p onclick="action(event)">click me!</p>
+        <script>
+            var counter = 0;
+
+            function action(event){
+                counter++;
+                var dom = event.target;
+                dom.textContent = 'Count: ' + counter;
+            }
+        </script>
+    </body>
+</html>

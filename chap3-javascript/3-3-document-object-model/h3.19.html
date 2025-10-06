@@ -1,0 +1,49 @@
+<!--
+    Font Style Designation: "Style"이라는 DOM 오브젝트의 속성 중 하나를 이용! 
+-->
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello!</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+    </head>
+    <body class="container">
+        <h1>Hello!</h1>
+        <p id="msg">フォントサイズとフォント名を設定：</p>
+        <div class="form-group">
+            <label for="f1">Size</label>
+            <input type="range" id="f1" min="10" max="100" class="form-control-range">
+        </div>
+        <div class="form-group">
+            <label for="f2">Font Family</label>
+            <select id="f2" class="form-control">
+                <option>Serif</option>
+                <option>Sans-Serif</option>
+                <option>Monospace</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button onclick="action(event)" class="btn btn-primary">
+                Click!
+            </button>
+        </div>
+        <script>
+            function action(event){
+                var f1 = document.querySelector('#f1'); 
+                var f2 = document.querySelector('#f2'); 
+                var msg = document.querySelector('#msg');
+                msg.style.fontFamily = f2.value;
+                msg.style.fontSize = f1.value + 'px';
+                var result = f2.value + '(' + f1.value + 'px)';
+                msg.innerHTML = result;
+            }
+        </script>
+    </body>
+</html>
+
+<!--
+    fontFamily: style 프로파티 내에 fontFamilly 프로퍼티가 준비되어 있다. 
+    마찬가지로 fontSize: style 프로파티 내에 fontSize 프로퍼티가 준비되어 있다. 
+-->
