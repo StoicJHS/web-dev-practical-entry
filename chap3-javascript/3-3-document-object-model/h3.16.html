@@ -1,0 +1,45 @@
+<!--
+    JavaScript에서 HTML을 다룬다고 한다면, 오브젝트의 사용법은 필수!
+
+    HTML의 요소는, JavaScript의 "DOM (Document Object Model)"이라는 오브젝트를 통해서 조작할 수 있다. 
+    이것은, HTML이나 XML등의 요소를 JS등의 언어가 사용할 수 있도록 준비된 오브젝트모델(오브젝트를 사용한 구조)이다.
+    따라서, DOM을 다루기 위해선, 오브젝트란 것이 어떤 것으로 어떻게 사용되는지를 알아야만 한다.
+
+    *DOM을 사용해보자
+    조작하고자 하는 HTML요소의 DOM오브젝트를 집어내어, 그 프로퍼티나 메소드를 조작한다.
+
+    HTML이 불러와서 읽혀지면, 그곳에 기술된 모든 HTML 요소는 DOM 오브젝트로서 오브젝트 생성되어, 
+    각각의 HTML 요소의 組み込み상태(임베디드, 내장형 상태) 그대로 오브젝트끼리 組み込まれていく。
+    이 오브젝트의 組み込み(임베디드)상태를 "DOM트리""라고 한다.
+
+    ** DOM 오브젝트를 얻기:
+    변수 = document.querySelector(요소의 지정);
+
+    여기서 나오는 "document"가 웹페이지의 도큐멘트 전체를 다루는 DOM 오브젝트다. 
+    querySelector는, 인수를 지정한 값을 바탕으로 DOM 오브젝트를 꺼내는 메소드. 
+    인수에는, CSS에서 사용한 "셀렉터"를 텍스트로 지정한다.
+    (셀렉터는 스타일 적용 대상을 지정하는데 사용. 요소형 셀렉터, id셀렉터, 클래스 셀렉터 등등)
+    그것을 사용해서 DOM 오브젝트를 꺼내는 대상의 HTML요소를 지정할 수 있다. 
+
+    예제: 표지 메세지를 설정하자. p요소로 표시되는 메세지의 작성.
+
+-->
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello!</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+    </head>
+    <body class="container">
+        <h1>Hello!</h1>
+        <p id="msg">wait...</p>
+        <script>
+            var p = document.querySelector('#msg');
+            setTimeout(function(){
+                p.textContent = "This is the power of DOM control!";
+            }, 3000);
+        </script>
+    </body>
+</html>
