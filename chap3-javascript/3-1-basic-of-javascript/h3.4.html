@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello!</title>
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+    </head>
+    <body class="container">
+        <h1>Hello!</h1>
+        <p> <script>
+            var jikan = 12;
+            var result = Math.floor(jikan / 6);
+            switch(result){
+                case 0:
+                    document.write('おやすみなさい。' + jikan + '時は、深夜です。');
+                    break;
+                case 1:
+                    document.write('おはようございます。' + jikan + '時は、朝です。');
+                    break;
+                case 2:
+                    document.write('こんにちは。' + jikan + '時は、昼です。');
+                    break;
+                case 3:
+                    document.write('こんばんは。' + jikan + '時は、夜です。');
+                    break;
+                default:
+                    document.write('?' + jikan + '時、ですか？');
+            }
+        </script> </p>
+    </body>
+</html>
