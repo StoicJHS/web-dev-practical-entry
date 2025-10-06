@@ -1,0 +1,70 @@
+<!-- 
+    아까 만든 keisan은 오브젝트(어떤 상황에서 필요한 데이터나 처리를 전부 1개로 합쳐서 완결되어 있는 것)이다.
+
+    오브젝트 안에는 "데이터(값)"과 "처리(함수)"를 보관할 수 있다. 이것들을 각각 property와 method라고 한다! 
+    오브젝트라는 것은 프로퍼티와 메소드를 만드는 것! 
+
+    우리가 keisan이라는 오브젝트를 하나 만들었는데, 만약 학생 한명 한명에 대해서 이러한 처리를 하려고 한다면, keisan을
+    학생수만큼 만들어야 한다. 이것은 꽤나 힘든 일.
+    -> 여기서 "클래스"라는 것을 도입한다. 클래스란, 작성한 오브젝트의 내용을 정의하는, 일종의 설계도! 
+
+    **** 클래스의 기본형 ****
+    class 클래스명{
+        this.프로파티 = 값;
+
+        constructor(인수){
+            ... 초기화 처리 ...
+        }
+        메소드(인수){
+            ... 처리 ...
+        }
+    }
+    *********************
+
+    여기서 constructor는 클래스에서 오브젝트를 만들 때 자동으로 불러지는 메소드. 오브젝트의 프로퍼티의 값을 설정한다던가, 
+    그런 류의 초기화 처리가 일어난다. 프로퍼티로의 값 설정은 여기서 정리해놓는 것이 좋다. 
+
+    작성한 클래스는,
+        변수 = new 클래스(변수);
+    와 같이 new라는 키워드를 통해서 이용할 수 있다. 이렇게 클래스를 호출하면, 그 클래스를 바탕으로 오브젝트를 만들 수 있다.
+    인수에 값을 준비하면, 그것은 constructor 메소도의 인수로 전달된다. 그 외는 지금까지와 사용법 동일.
+
+ -->
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello!</title>
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+    </head>
+    <body class="container">
+        <h1>Hello!</h1>
+        <p> <script>
+            class Keisan {
+                constructor(data) {
+                    this.data = data;
+                }
+                calc(){
+                    var total = 0;
+                    for (var n in this.data){
+                        total += this.data[n];
+                    }
+                    return total;   
+                }
+                report(){
+                    document.write('<div class="alert alert-info">');
+                    document.write('Data '+ this.data + '<br>');
+                    document.write('total: '+ this.calc());
+                    document.write('</div>');
+                }
+        }
+
+        var k1 = new Keisan([12, 34, 56, 78, 90]);
+        k1.report();
+        var k2 = new Keisan([109, 87, 65, 43, 21]);
+        k2.report();
+        </script> </p>
+    </body>
+</html>

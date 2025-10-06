@@ -1,0 +1,23 @@
+<!-- Dictionary! -->
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello!</title>
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+    </head>
+    <body class="container">
+        <h1>Hello!</h1>
+        <p> <script>
+            var arr = {'国語': 98, '数学': 96, '英語': 94, '理科': 98, '社会':99};
+            var total = 0;
+            for(var key in arr){
+                total += arr[key];
+                document.write(key + ': ' + arr[key] + '<br>');
+            }
+            document.write("The total is "+ total+", the average is "+ total/5 +'.');
+        </script> </p>
+    </body>
+</html>

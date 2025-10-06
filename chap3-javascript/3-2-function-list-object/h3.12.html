@@ -1,0 +1,38 @@
+<!-- 
+    Functions in an array?! Because, functions are treated as values in JavaScript!
+
+    keisan['data']: 말그대로 데이터
+    keisan['calc']: 함수. 데이터의 합산을 리턴함.
+    keisan['report']: 함수. calc를 불러내 데이터와 합계를 표시함.
+ -->
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello!</title>
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+    </head>
+    <body class="container">
+        <h1>Hello!</h1>
+        <p> <script>
+            var keisan = {};
+            keisan['data'] = [0];
+            keisan['calc'] = function() {
+                var total = 0;
+                for(var n in keisan['data']){
+                    total += keisan['data'][n];
+                }
+                return total;
+            }
+            keisan['report'] = function(){
+                document.write('Data: '+ keisan['data'] + '<br>');
+                document.write('Total: ' + keisan['calc']());
+            }
+
+            keisan['data'] = [123, 45, 67, 89, 10];
+            keisan['report']();
+        </script> </p>
+    </body>
+</html>
