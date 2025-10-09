@@ -1,0 +1,63 @@
+<!--
+    텍스트노드: HTML 요소에 표시되는 텍스트를 나타내는 노드
+    엘레멘트노드: HTML 요소 (p요소등)를 나타내는 노드
+    코멘트노드: 코멘트로서 준비된 노드
+
+    e.g.) p요소를 나타낸는 엘레멘트 노드가 있고 그 안에는 거기서 표시되는 텍스트 노드가 들어가있다. 
+    새롭게 HTML요소를 작성하고자 한다면, 엘레멘트 노드(이후 간략화를 위해 엘레멘트)를 작성하고 
+    그것을 다른 엘레멘트의 안에 들어가도록 하여 표시하는 작업을 수행. 
+
+    * 엘레멘트의 작성: 변수 = document.createElement(요소명);
+    * 엘레멘트의 組み込み：
+        <DOM 오브젝트>.append( 엘레멘트 );
+        <DOM 오브젝트>.appendChild(엘레멘트);
+        
+    * 엘레멘트의 제거: <엘레멘트>.remove();
+
+-->
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello!</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+    </head>
+    <body class="container">
+        <h1>Hello!</h1>
+        <p id="msg" class="h4" onclick="action(event)">type item...</p>
+        <div class="form-group">
+            <label for="f1">Item:</label>
+            <input type="text" id="f1" class="form-control">
+        </div>
+        <div class="form-group">
+            <button onclick="action(event)" class="btn btn-primary">
+            Click!
+            </button>
+        </div>
+        <h6>List</h6>
+        <ul id="list" class="list-group"></ul>
+        <script>
+            function action(event){
+                var f1 = document.querySelector('#f1');
+                var list = document.querySelector('#list');
+                var msg = document.querySelector('#msg');
+                if (f1.value == ''){
+                    var item = list.children[0].remove();
+                } else {
+                    var li = document.createElement('li');
+                    li.className = 'list-group-item';
+                    li.textContent = f1.value;
+                    list.appendChild(li);
+                    msg.textContent= ' [' + f1.value + ']を追加しました。';
+                    f1.value = '';
+                }
+            }
+        </script>
+        
+    </body>
+</html>
+
+<!-- 
+   
+-->
