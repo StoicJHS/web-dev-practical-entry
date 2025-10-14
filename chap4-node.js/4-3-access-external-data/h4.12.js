@@ -21,7 +21,7 @@
 
 const https = require('https');
 
-https.get('https://tuya-no.firebaseio.com/message.json', (res) => { // Currently, unavailable.
+https.get('https://fapi.binance.com/fapi/v1/depth?symbol=BTCUSDT&limit=5', (res) => { // Currently, unavailable.
     let body = '';
     res.setEncoding('utf8');
     res.on('data', (chunck) => {
