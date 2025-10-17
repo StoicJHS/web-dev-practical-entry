@@ -44,4 +44,4 @@ var server = http.createServer( // 서버의 처리를 위한 오브젝트의 �
         res.end('Hello, Node.js!!!'); // 서버에 접속했을 때의 처리. end가, 인수를 지정한 값을 엑세스해서 접속한 쪽에 보낸다.
     }
 )
-server.listen(3000); // 준비가 되었다면 대기중인 상태가 된다. 이를 행하는 것이 listen 메소드.
+server.listen(3000); // 준비가 되었다면 대기중인 상태가 된다. 이를 행하는 것이 listen 메소드.  
